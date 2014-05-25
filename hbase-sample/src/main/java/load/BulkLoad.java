@@ -151,7 +151,7 @@ public class BulkLoad {
 			if (job.waitForCompletion(true)) {
 				// Load generated HFiles into table
 				LoadIncrementalHFiles loader = new LoadIncrementalHFiles(conf);
-				//loader.doBulkLoad(new Path(args[1]), hTable);
+				loader.doBulkLoad(new Path(args[1]), hTable);
 			} else {
 				System.out.println("loading failed.");
 				System.exit(1);
